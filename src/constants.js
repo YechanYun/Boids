@@ -1,19 +1,19 @@
 import { Bird } from "./Bird.js"
 
-// scene
+// scene properties
 export const CANVAS_WIDTH = 2000
 export const CANVAS_HEIGHT = 1000
 export const leftRightMargin = 100
 export const topBottomMargin = 100
 export const BACKGROUND_COLOR = "#0f3968"
 
-// bird
+// bird properties
 export const maxSpeed = 300
 export const minSpeed = 220
 export const RADIUS = 5
 export const BIRD_COLOR = "#ffffff"
 
-// Initialize birds
+
 export const BIRDS_NUM = 200
 export const INITIAL_BIRDS = Array.from({ length: BIRDS_NUM }, () => 
 new Bird(

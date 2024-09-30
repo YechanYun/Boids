@@ -1,7 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './App.css';
-import { CURSOR_THROTTLE_RATE, INITIAL_BIRDS, INITIAL_SEP_FACTOR, INITIAL_ALIGN_FACTOR, MAX_TURN_FACTOR, INITIAL_TURN_FACTOR, BACKGROUND_COLOR, BIRDS_NUM, CANVAS_HEIGHT, CANVAS_WIDTH, PROTECTED_RANGE_DISTANCE, visibleRangeDistance, INITIAL_COHESION_FACTOR, MAX_COHESION_FACTOR, MAX_ALIGN_FACTOR, MAX_SEP_FACTOR, SEP_STEP, ALIGN_STEP, COHESION_STEP, TURN_FACTOR_STEP} from './constants';
-import { nearbyBirds, drawTriangle, drawCircle } from './utilities.js';
+import { CURSOR_THROTTLE_RATE, 
+  INITIAL_BIRDS, INITIAL_SEP_FACTOR, INITIAL_ALIGN_FACTOR, MAX_TURN_FACTOR, INITIAL_TURN_FACTOR, 
+  BACKGROUND_COLOR, CANVAS_HEIGHT, CANVAS_WIDTH, 
+  PROTECTED_RANGE_DISTANCE, visibleRangeDistance, 
+  INITIAL_COHESION_FACTOR, MAX_COHESION_FACTOR, MAX_ALIGN_FACTOR, 
+  MAX_SEP_FACTOR, SEP_STEP, ALIGN_STEP, COHESION_STEP, TURN_FACTOR_STEP} from './constants';
+import { nearbyBirds, drawCircle } from './utilities.js';
 import { Point } from "./Point.js"
 import _ from 'lodash'
 
@@ -105,7 +110,6 @@ function App() {
 
       updatedBirds.forEach(bird => {
         bird.update(deltaTime)
-        // drawTriangle(bird.x, bird.y, Math.atan(bird.velY, bird.velX), ctx)
         drawCircle(bird.x, bird.y, ctx)
         
       });
